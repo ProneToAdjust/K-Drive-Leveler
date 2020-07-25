@@ -2,6 +2,7 @@ import keyboard
 from macro_loop import MacroLoop
 from multiprocessing import freeze_support
 
+
 class KDriveLeveler: 
     def __init__(self):
         self.macro_loop = None
