@@ -32,14 +32,14 @@ class LevelerMacro(Thread):
         self.movement_thread.join()
 
     def __forward(self):
-        self.__hold(self.__KEYBOARD, 'w', 4)
+        self.__hold(self.__KEYBOARD, 'w', 5)
 
     def __backward(self):
-        self.__hold(self.__KEYBOARD, 's', 4)
+        self.__hold(self.__KEYBOARD, 's', 5)
 
     def __air_routine(self):
         # Jump
-        self.__hold(self.__KEYBOARD, 'space', 1)
+        self.__hold(self.__KEYBOARD, 'space', 2)
         sleep(0.4)
 
         # Copter
