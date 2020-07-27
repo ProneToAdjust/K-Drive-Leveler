@@ -24,6 +24,7 @@ class KDriveLeveler:
     def __toggle_macro_loop(self):
         if self.macro_loop is not None and self.macro_loop.is_alive():
             self.__stop_macro_loop()
+            self.__release_keys()
             print('Macro stopped')
         
         else:
@@ -38,6 +39,11 @@ class KDriveLeveler:
     def __stop_macro_loop(self):
         if self.macro_loop is not None and self.macro_loop.is_alive():
             self.macro_loop.kill()
+
+    def __release_keys(self):
+        keyboard.release('w')
+        keyboard.release('s')
+        keyboard.release('space')
 
 
 def main():
