@@ -23,7 +23,7 @@ class KDriveLeveler:
 
     def __toggle_macro_loop(self):
         if self.macro_loop is not None and self.macro_loop.is_alive():
-            self.macro_loop.kill()
+            self.__stop_macro_loop()
             print('Macro stopped')
         
         else:
@@ -34,6 +34,10 @@ class KDriveLeveler:
         self.macro_loop = MacroLoop()
         self.macro_loop.start() 
         print('Macro started')
+
+    def __stop_macro_loop(self):
+        if self.macro_loop is not None and self.macro_loop.is_alive():
+            self.macro_loop.kill()
 
 
 def main():
