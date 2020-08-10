@@ -56,7 +56,7 @@ class LevelerMacro(Thread):
         keyboard.press_and_release('space')
         sleep(0.4)
 
-        # Tail Plank
+        # Nose Planker
         mouse.press(mouse.RIGHT)
         sleep(0.1)
         mouse.release(mouse.RIGHT)
