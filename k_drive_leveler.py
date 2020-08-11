@@ -1,5 +1,6 @@
 import keyboard
 from macro_loop import MacroLoop
+from leveler_macro import LevelerMacro
 from multiprocessing import freeze_support
 
 
@@ -32,7 +33,7 @@ class KDriveLeveler:
             self.__start_macro_loop()
 
     def __start_macro_loop(self):
-        self.macro_loop = MacroLoop()
+        self.macro_loop = MacroLoop(LevelerMacro)
         self.macro_loop.start() 
         print('Macro started')
 
