@@ -47,6 +47,12 @@ class LevelerMacro(Thread):
         self.__hold(self.__KEYBOARD, 'space', 2)
         sleep(0.35)
 
+        # Nose Planker
+        mouse.press(mouse.RIGHT)
+        sleep(0.075)
+        mouse.release(mouse.RIGHT)
+        sleep(0.35)
+
         # Copter
         keyboard.press_and_release('space')
         sleep(0.35)
