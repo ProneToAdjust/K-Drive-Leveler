@@ -43,27 +43,27 @@ class LevelerMacro(Thread):
     def __air_routine(self):
         # Jump
         self.__hold(self.__KEYBOARD, 'space', 2)
-        sleep(0.4)
+        sleep(0.35)
 
         # Copter
         keyboard.press_and_release('space')
-        sleep(0.4)
+        sleep(0.35)
 
         # Nose Planker
         mouse.press(mouse.RIGHT)
         sleep(0.1)
         mouse.release(mouse.RIGHT)
-        sleep(0.4)
+        sleep(0.35)
 
         # Copter
         keyboard.press_and_release('space')
-        sleep(0.4)
+        sleep(0.35)
 
         # Nose Planker
         mouse.press(mouse.RIGHT)
         sleep(0.1)
         mouse.release(mouse.RIGHT)
-        sleep(0.4)
+        sleep(0.35)
 
         # Copter
         keyboard.press_and_release('space')
