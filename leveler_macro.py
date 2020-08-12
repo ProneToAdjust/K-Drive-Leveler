@@ -13,6 +13,9 @@ class LevelerMacro(Thread):
         self.movement_thread = None
 
     def run(self):
+        self.__execute_macro()
+
+    def __execute_macro(self):
         # While moving forward, execute air routine
         self.movement_thread = Thread(target=self.__forward)
         self.movement_thread.daemon = True
