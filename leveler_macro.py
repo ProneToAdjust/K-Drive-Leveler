@@ -53,7 +53,7 @@ class LevelerMacro(Thread):
 
         # Nose Planker
         mouse.press(mouse.RIGHT)
-        sleep(0.1)
+        sleep(0.05)
         mouse.release(mouse.RIGHT)
         sleep(0.35)
 
@@ -63,7 +63,7 @@ class LevelerMacro(Thread):
 
         # Nose Planker
         mouse.press(mouse.RIGHT)
-        sleep(0.1)
+        sleep(0.05)
         mouse.release(mouse.RIGHT)
         sleep(0.35)
 
