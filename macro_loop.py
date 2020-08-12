@@ -13,7 +13,6 @@ class MacroLoop(Process):
 
     def __execute_leveler_macro(self):
         leveler_macro = self.leveler_macro()
-        leveler_macro.daemon = True
         leveler_macro.start()
         leveler_macro.join()
 

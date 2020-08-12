@@ -12,6 +12,8 @@ class LevelerMacro(Thread):
         super(LevelerMacro, self).__init__()
         self.movement_thread = None
 
+        self.daemon = True
+        
     def run(self):
         self.__execute_macro()
 
