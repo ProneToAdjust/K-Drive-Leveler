@@ -1,4 +1,5 @@
 import keyboard
+import mouse
 from macro_loop import MacroLoop
 from leveler_macro import LevelerMacro
 from multiprocessing import freeze_support
@@ -45,6 +46,7 @@ class KDriveLeveler:
         keyboard.release('w')
         keyboard.release('s')
         keyboard.release('space')
+        mouse.release(mouse.RIGHT)
 
 
 def main():
