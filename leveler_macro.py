@@ -19,7 +19,7 @@ class LevelerMacro(Thread):
 
     def __execute_macro(self):
         # While moving forward, execute air routine
-        self.movement_thread = Thread(target=self.__forward)
+        self.movement_thread = Thread(target=self.__forward, args=[5])
         self.movement_thread.daemon = True
         self.movement_thread.start()
 
@@ -28,7 +28,7 @@ class LevelerMacro(Thread):
         self.movement_thread.join()
 
         # While moving backwards, execute air routine
-        self.movement_thread = Thread(target=self.__backward)
+        self.movement_thread = Thread(target=self.__backward, args=[5])
         self.movement_thread.daemon = True
         self.movement_thread.start()
 
@@ -36,11 +36,11 @@ class LevelerMacro(Thread):
 
         self.movement_thread.join()
 
-    def __forward(self):
-        self.__hold(self.__KEYBOARD, 'w', 5)
+    def __forward(self, seconds):
+        self.__hold(self.__KEYBOARD, 'w', seconds)
 
-    def __backward(self):
-        self.__hold(self.__KEYBOARD, 's', 5)
+    def __backward(self, seconds):
+        self.__hold(self.__KEYBOARD, 's', seconds)
 
     def __air_routine(self):
         # Jump
