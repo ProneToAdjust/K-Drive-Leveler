@@ -12,10 +12,7 @@ class MacroLoop(Process):
             self.__execute_leveler_macro()
 
     def __execute_leveler_macro(self):
-        leveler_macro = self.leveler_macro()
-        leveler_macro.start()
-        leveler_macro.join()
-
+        self.leveler_macro.start()
 
 if __name__ == "__main__":
     from leveler_macro import LevelerMacro

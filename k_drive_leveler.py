@@ -34,7 +34,7 @@ class KDriveLeveler:
             self.__start_macro_loop()
 
     def __start_macro_loop(self):
-        self.macro_loop = MacroLoop(LevelerMacro)
+        self.macro_loop = MacroLoop(LevelerMacro())
         self.macro_loop.start() 
         print('Macro started')
 

@@ -4,11 +4,17 @@ from time import sleep
 from threading import Thread
 
 
-class LevelerMacro(Thread):
+class LevelerMacro():
     __KEYBOARD = 0
     __MOUSE = 0
 
-    def __init__(self, movement_time=5, jump_charge_time=2, after_jump_time=0.35, trick_cycles=3):
+    def __init__(
+        self, 
+        movement_time=5, 
+        jump_charge_time=2, 
+        after_jump_time=0.35, 
+        trick_cycles=3
+        ):
         super(LevelerMacro, self).__init__()
         self.movement_time = movement_time
         self.jump_charge_time = jump_charge_time
@@ -19,10 +25,21 @@ class LevelerMacro(Thread):
 
         self.daemon = True
 
-    def run(self):
-        self.__execute_macro(self.movement_time, self.jump_charge_time, self.after_jump_time, self.trick_cycles)
+    def start(self):
+        self.__execute_macro(
+            self.movement_time, 
+            self.jump_charge_time, 
+            self.after_jump_time, 
+            self.trick_cycles
+            )
 
-    def __execute_macro(self, movement_time, jump_charge_time, after_jump_time, trick_cycles):
+    def __execute_macro(
+        self, 
+        movement_time, 
+        jump_charge_time, 
+        after_jump_time, 
+        trick_cycles
+        ):
         # While moving forward, execute air routine
         self.movement_thread = Thread(target=self.__forward, args=[movement_time])
         self.movement_thread.daemon = True
@@ -93,4 +110,3 @@ if __name__ == "__main__":
     leveler_macro = LevelerMacro()
     sleep(5)
     leveler_macro.start()
-    leveler_macro.join()
