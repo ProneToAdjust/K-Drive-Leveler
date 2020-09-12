@@ -41,10 +41,7 @@ class KDriveLeveler:
     def __start_macro_loop(self):
         checkbutton_values = self.mod_selection_gui.get_checkbutton_values()
 
-        movement_time, 
-        jump_charge_time, 
-        after_jump_time, 
-        trick_cycles = self.__calculate_macro_timings(checkbutton_values)
+        movement_time, jump_charge_time, after_jump_time, trick_cycles = self.__calculate_macro_timings(checkbutton_values)
 
         leveler_macro = LevelerMacro(
             movement_time, 
